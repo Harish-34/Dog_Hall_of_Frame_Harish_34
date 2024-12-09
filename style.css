@@ -1,0 +1,175 @@
+/* Dog Hall of Fame style sheet 
+Author: Harish Nidamaneni 
+Date: December 8, 2024 */
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures consistent box model */
+}
+
+/* Responsive Body Styling */
+body {
+    font-family: Arial, sans-serif; /* Sets font for the body */
+    background: linear-gradient(to right, #ff7e5f, #feb47b); /* Background gradient */
+    color: #5d4037; /* Text color */
+    line-height: 1.6; /* Line height for readability */
+    padding: 0 1em; /* Horizontal padding */
+    font-size: 20px; /* Increase base font size */
+    opacity: 1; /* Full opacity for body */
+}
+
+/* Header Styling */
+header {
+    text-align: center; /* Centers header content */
+    background-color: #7fb4b9; /* Header background color */
+    padding: 1.2em 0; /* Increased padding */
+    color: #ffd600; /* Header text color */
+    opacity: 0.95; /* Header opacity */
+}
+
+header img {
+    width: 100%; /* Makes image span full width */
+    height: auto; /* Maintains aspect ratio */
+    opacity: 0.8; /* Sets opacity for header image */
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #5d4037; /* Navigation background color */
+    display: center;
+    justify-content: left; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    padding: 0.6em 1.2em; /* Increased padding */
+    opacity: 0.95; /* Navigation opacity */
+}
+
+#nav-links {
+    display: flex; /* Makes navigation links align horizontally */
+    list-style: none; /* Removes bullet points */
+    transition: all 0.3s ease; /* Smooth transition for menu toggle */
+    margin: 0; /* Removes default margin */
+}
+
+#nav-links li {
+    margin: 0 1.9em; /* Horizontal spacing between menu items */
+}
+
+#nav-links a {
+    text-decoration: none; /* Removes underline */
+    color: white; /* White text color */
+    font-size: 1.32em; /* Increased font size */
+}
+
+#nav-links a:hover {
+    color: #ffd600; /* Changes color on hover */
+}
+
+#nav-toggle {
+    background: none; /* No background */
+    border: none; /* No border */
+    font-size: 1.8em; /* Increased font size */
+    color: white; /* White color */
+    cursor: pointer; /* Pointer cursor for clickability */
+    display: none; /* Hide the toggle button on large screens */
+}
+
+/* Main Content */
+#page-wrapper {
+    max-width: 1200px; /* Sets maximum width */
+    margin: auto; /* Centers the content */
+    padding: 2.4em 1.2em; /* Increased padding */
+    background-color: #f8f8f8; /* Light background color */
+    opacity: 0.95; /* Content opacity */
+}
+
+section {
+    margin-bottom: 2.4em; /* Bottom margin between sections */
+    padding: 1.2em; /* Increased padding */
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    opacity: 0.9; /* Section opacity */
+}
+
+article {
+    margin: 1.2em 0; /* Vertical margin */
+    padding: 1.2em; /* Padding inside article */
+    border-left: 4px solid #ff7e5f; /* Left border for styling */
+    opacity: 0.95; /* Article opacity */
+}
+
+figure {
+    margin: 1.2em 0; /* Vertical margin */
+    text-align: center; /* Centers images */
+}
+
+figure img {
+    max-width: 100%; /* Ensures images are responsive */
+    border-radius: 8px; /* Rounded corners */
+    opacity: 0.85; /* Image opacity */
+}
+
+aside {
+    background-color: #fffbea; /* Light yellow background for aside */
+    border-left: 5px solid #ffd600; /* Border for emphasis */
+    padding: 1.2em; /* Increased padding */
+    margin-top: 2.4em; /* Top margin */
+    font-style: italic; /* Italic text style */
+    opacity: 0.95; /* Aside opacity */
+}
+
+/* Footer */
+footer {
+    text-align: center; /* Centers footer text */
+    padding: 1.2em; /* Padding for footer */
+    background-color: #7fb4b9; /* Footer background color */
+    color: #ffd600; /* Footer text color */
+    opacity: 0.95; /* Footer opacity */
+}
+
+/* Large screen layout (default for screens larger than 768px) */
+@media (min-width: 769px) {
+    #nav-links {
+        display: flex; /* Navigation links should be side by side */
+        flex-direction: row; /* Aligns the links horizontally */
+        align-items: center; /* Centers vertically */
+        justify-content: center; /* Centers items horizontally */
+    }
+
+    #nav-toggle {
+        display: none; /* Hide the toggle button on larger screens */
+    }
+}
+
+/* Responsive Layout for Smaller Screens */
+@media (max-width: 768px) {
+    #nav-links {
+        display: none; /* Hide navigation links by default */
+        flex-direction: column; /* Stack links vertically */
+        align-items: center; /* Center links */
+        justify-content: center; /* Vertically align links */
+        width: 100%; /* Full width */
+        background-color: #5d4037; /* Dark background for smaller screens */
+    }
+
+    #nav-links.show {
+        display: flex; /* Display links when toggle is clicked */
+    }
+
+    #nav-links li {
+        margin: 0.6em 0; /* Vertical spacing between links */
+        width: 100%; /* Links span full width */
+    }
+
+    #nav-links a {
+        width: 100%; /* Links take full width */
+        display: block; /* Ensures full clickable area */
+        padding: 0.6em 0; /* Padding inside each link */
+    }
+
+    #nav-toggle {
+        display: block; /* Show the toggle button on smaller screens */
+    }
+}

@@ -1,0 +1,98 @@
+<!-- Dog Hall of Fame Winners
+Author: Harish Nidamaneni
+Date: December 8, 2024 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winners - Dog Hall of Fame</title>
+    <link rel="stylesheet" href="./style/style.css"> <!-- Link to external CSS for page styling -->
+</head>
+<body>
+<header>
+    <h1>Dog Hall of Fame</h1>
+    <img src="./images/baner.jpg" alt="Banner logo for Dog Hall of Fame"> <!-- Image banner for the website header -->
+</header>
+
+<!-- Navigation Bar with Toggle Button -->
+<nav>
+    <button id="nav-toggle" aria-label="Toggle Navigation">☰</button> <!-- Button to toggle navigation on mobile view -->
+    <ul id="nav-links" class="hidden"> <!-- Navigation links, initially hidden for mobile -->
+        <li><a href="index.html">Home</a></li>
+        <li><a href="./winners.html">Winners</a></li>
+        <li><a href="./nominations.html">Nominations</a></li>
+        <li><a href="./services.html">Services</a></li>
+    </ul>
+</nav>
+
+<div id="page-wrapper">
+    <main>
+        <!-- Voting Section -->
+        <section>
+            <h2>Vote for Your Favorite Dog</h2>
+            <p>At Dog Hall of Fame, we celebrate the incredible achievements of dogs in various categories such as heroism, loyalty, and companionship. Help us honor these remarkable dogs by casting your vote!</p>
+            <p><strong>Choose your favorite dog from the list below, tell us why you admire them, and submit your vote! Voting is open until MM-DD-YYYY.</strong></p>
+
+            <!-- Vote Form -->
+            <form action="#" method="post" onsubmit="submitVote(); return false;"> <!-- Form for voting -->
+                <label for="dog-name">Dog Name:</label>
+                <select id="dog-name" name="dog-name" required> <!-- Dropdown to select a dog -->
+                    <option value="">--Select Dog--</option>
+                    <option value="Lucca">Lucca</option>
+                    <option value="Todd">Todd</option>
+                    <option value="Cheyenne">Cheyenne</option>
+                    <option value="Roselle">Roselle</option>
+                    <option value="Laika">Laika</option>
+                    <option value="Nemo">Nemo</option>
+                    <option value="Jake">Jake</option>
+                </select>
+                <br>
+
+                <label for="reason">Why You Like This Dog:</label>
+                <textarea id="reason" name="reason" rows="4" cols="50" required></textarea> <!-- Text area for the reason behind the vote -->
+                <br>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required> <!-- Input for the voter's email -->
+                <br>
+
+                <button type="submit">Submit Vote</button> <!-- Submit button for the form -->
+            </form>
+        </section>
+
+        <!-- Additional Information Section -->
+        <section>
+            <h3>Want to do more?</h3>
+            <p>If you'd like to contribute further, consider nominating a dog for next year’s awards, or making a donation to support the Dog Hall of Fame.</p>
+            <p><a href="./nominations.html">Nominate a Dog</a> | <a href="./services.html">Make a Donation</a></p> <!-- Links to other services or nominations -->
+        </section>
+    </main>
+</div> <!-- End of page-wrapper -->
+
+<footer>
+    <p>&copy; 2024 Dog Hall of Fame. All rights reserved.</p> <!-- Footer with copyright information -->
+</footer>
+
+<script>
+    // Function to handle the submission of the vote form
+    function submitVote() {
+        alert("Thank you for voting! Your vote has been submitted. Results will be posted on MM-DD-YYYY.");
+        // Clear the form fields after submission
+        document.getElementById("dog-name").value = "";
+        document.getElementById("reason").value = "";
+        document.getElementById("email").value = "";
+    }
+
+    // Navigation toggle functionality for mobile view
+    const toggleButton = document.getElementById('nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    // Toggle visibility of navigation links on mobile when the button is clicked
+    toggleButton.addEventListener('click', () => {
+        navLinks.classList.toggle('show'); // Toggle the 'show' class for navigation visibility
+    });
+</script>
+</body>
+</html>
