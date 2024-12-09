@@ -168,8 +168,24 @@ footer {
         display: block; /* Ensures full clickable area */
         padding: 0.6em 0; /* Padding inside each link */
     }
-
-    #nav-toggle {
-        display: block; /* Show the toggle button on smaller screens */
+    /* Make the text area responsive */
+    textarea {
+        width: 100%; /* Ensure text area takes up full available width */
+        max-width: 100%; /* Prevents text area from exceeding screen width */
+        padding: 0.8em; /* Add padding for better appearance */
+        font-size: 1em; /* Ensure readable text */
+        border-radius: 5px; /* Optional: rounded corners */
     }
-}
+    
+    /* Optional: Add some styling for mobile screens */
+    @media (max-width: 768px) {
+        textarea {
+            width: 100%; /* Ensures it takes full width on small screens */
+            box-sizing: border-box; /* Prevents padding from causing overflow */
+        }
+    }
+    
+        #nav-toggle {
+            display: block; /* Show the toggle button on smaller screens */
+        }
+    }
